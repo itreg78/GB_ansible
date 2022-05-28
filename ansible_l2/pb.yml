@@ -1,6 +1,7 @@
 ---
 - name: Make directory, file
   hosts: my_servers
+  become: yes
   roles:
     - makefile
 
