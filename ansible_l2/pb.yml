@@ -7,6 +7,7 @@
 
 - name: Make user_and_group
   hosts: my_servers
+  become: yes
   roles:
     - makeuser
  
