@@ -1,0 +1,13 @@
+---
+- name: make dir
+  file:
+    path: "{{ file.path }}"
+    state: directory
+    mode: '0755'
+
+
+
+- name: Touch a file,  to 0777)
+  file:
+    path: "{{ file.path }}/{{ file.name }}"
+    state: touch
