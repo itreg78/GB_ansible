@@ -4,7 +4,7 @@
   become: yes
   
   vars:
-    sourse_file: .my_first_site
+    sourse_file: my_first_site
     destin_file: /var/www/html
     
   tasks:

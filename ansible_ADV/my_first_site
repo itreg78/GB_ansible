@@ -1,4 +1,6 @@
-<h3 style="text-align: center;">Привет!</h3>
-<h3 style="text-align: center;">Я студент GeekBrains и это мой сайт</h3>
-<p>я использовал&nbsp; <a href="https://yandex.ru/video/preview/?filmId=13256920109130504977&amp;from=tabbar&amp;text=html-online.com">Эту ссылку </a>для создания HTML кода</p>
+<HTML>
+<h3 style="text-align: center;">Hello!</h3>
+<h3 style="text-align: center;">I am a student of GeekBrains course</h3>
+<p>I used&nbsp; <a href="https://kupipet.ru/upload/iblock/a3b/a3b24d735e6869e6e2fa7d280a277c56.jpg">this link</a> for making this site!</p>
 <p><img src="https://kupipet.ru/upload/iblock/a3b/a3b24d735e6869e6e2fa7d280a277c56.jpg" alt="ппывыв" width="602" height="376" /></p>
+</HTML>
