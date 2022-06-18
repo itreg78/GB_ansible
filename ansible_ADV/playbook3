@@ -1,0 +1,24 @@
+---
+- name: Install Appache and Upload my web page
+  hosts: all
+  become: yes
+  
+  vars:
+    sourse_file: .my_first_site
+    destin_file: /var/www/html
+    
+  tasks:
+  - name: install apache
+    apt: name=apache2 state=latest
+    
+  - name: copy myhomepage to servers
+    copy: src={{ sourse_file }} dest={{ destin_file}} mode=0555
+    notify: Restart Apache
+    
+  - name: start webserver and make it enable on boot
+    service: name=apache2 state=started enabled=yes
+    
+    
+  handlers:
+  - name: restart apach if something changed
+    service: name=apache2 state=restarted
