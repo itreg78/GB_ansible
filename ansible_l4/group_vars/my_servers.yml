@@ -1,0 +1,12 @@
+---
+file:
+    path: "/home/skif/somedir/"
+    name: "lab2"
+
+user_group  : "max1"
+user_login  : "max1"
+user_passwd : "$6$qzq/xbHj0$8vG2HawunhpMS/yOzBxFKN2HWxu1bGAHhEbWWfSXZzTW3T6coyo25RkmJJNkIF0BfOBFdXqgNcARtAL6SPu0x/"    
+    #user:
+    #group  : "max"
+    #login  : "max"
+    # passwd : "11112222"

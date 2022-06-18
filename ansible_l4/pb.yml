@@ -1,0 +1,14 @@
+---
+- name: Make directory, file
+  hosts: my_servers
+  become: yes
+  roles:
+    - makefile
+
+
+- name: Make user_and_group
+  hosts: my_servers
+  become: yes
+  roles:
+    - makeuser
+ 
