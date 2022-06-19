@@ -1,0 +1,9 @@
+переменные лежат в каталоге group_vars ...
+роли в roles/имяроли/tasks/main.yml
+
+
+пароль ансибл-волт:   1111 зашифрован файл в каталоге group_vars
+чтобы команда выполнилась нужно в конце вбить ask-vault-pass: 
+ansible all -m ping --ask-vault-pass
+ansible-playbook pb.yml -K --ask-vault-pass
+./run_pb.sh --ask-vault-pass
