@@ -1,12 +1,14 @@
 ---
 
 - name: Ensure group usergroup exists
+  tags: [makeuser]
   group:
     name: "{{ user_group }}"
     state: present
 
 
 - name: Add the user 'max' with a specific uid and a primary group of 'somegroup'
+  tags: [makeuser]
   user:
     name: "{{ user_login }}"
     comment: "{{ user_login }}"
