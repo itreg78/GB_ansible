@@ -3,7 +3,7 @@
   hosts: my_servers
   become: yes
   roles:
-    - makefile
+    - { role: makefile, tags: [makefile] }
 
 
 - name: Make user_and_group
