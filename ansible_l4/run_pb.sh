@@ -2,4 +2,5 @@
 
 ansible-playbook \
 	-K \
+	--ask-vault-pass \
 	pb.yml "$@" 

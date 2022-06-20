@@ -7,3 +7,8 @@
 ansible all -m ping --ask-vault-pass
 ansible-playbook pb.yml -K --ask-vault-pass
 ./run_pb.sh --ask-vault-pass
+
+
+
+ansible-playbook pb.yml -K --ask-vault-pass --tags makeuser
+ansible-playbook pb.yml -K --ask-vault-pass --skip-tags makeuser
