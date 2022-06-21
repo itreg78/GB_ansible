@@ -5,6 +5,7 @@
     state: latest
        
 - name: add user to group
+  become: true
    user:
      name: "{{ user_1 }}"
      groups: docker
