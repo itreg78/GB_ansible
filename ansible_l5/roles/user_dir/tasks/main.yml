@@ -1,23 +1,25 @@
 ---
 
-- name: Ensure group usergroup exists
-  group:
-    name: "{{ user_1 }}"
-    state: present
+- name: create group, user and "apps" dir
+  block:
+    - name:
+      group:
+        name: "{{ user_1 }}"
+        state: present
 
-- name: Add the user 'lesson5' with a specific uid and a primary group of lesson5
-  user:
-    name: "{{ user_1 }}"
-    create_home: yes
-    shell: /bin/bash
-    password: 11111111
-    group: "{{ user_1 }}"
+    - name: Add the user 'lesson5' with a specific uid and a primary group of lesson5
+      user:
+        name: "{{ user_1 }}"
+        create_home: yes
+        shell: /bin/bash
+        password: 11111111
+        group: "{{ user_1 }}"
     
-- name: make dir
-  file:
-    path: /home/"{{ user_1 }}"/Apps
-    state: directory
-    mode: '0755'
+    - name: make dir
+      file:
+        path: /home/"{{ user_1 }}"/Apps
+        state: directory
+        mode: '0755'
 
   rescue:
     - name: Sending an e-mail using Gmail SMTP servers
