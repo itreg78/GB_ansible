@@ -3,4 +3,11 @@
   hosts: my_servers
   become: yes
   roles:
-    - user_dir
+    - { role: user_dir, tags: [user_dir] }
+    
+- name: instaling docker.py start docker daemon, make docker container with nginx
+  hosts: my_servers
+  become: yes
+  roles:
+    - { role: dockers, tags: [dockers] }
+  
