@@ -4,7 +4,11 @@
     name: apache2
     state: latest
        
-       
+- name: add user to group docker
+      user:
+        name: "{{ user_1 }}"
+        groups: docker
+        append: yes     
      
 - docker_image:
     name: tomcat
