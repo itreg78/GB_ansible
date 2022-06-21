@@ -2,7 +2,7 @@
 
 - name: create group, user and "apps" dir
   block:
-    - name:
+    - name: create group
       group:
         name: "{{ user_1 }}"
         state: present
