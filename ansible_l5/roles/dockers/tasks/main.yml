@@ -4,7 +4,6 @@
     name: apache2
     state: latest
        
-      
 - name: add user to group
    user:
      name: "{{ user_1 }}"
