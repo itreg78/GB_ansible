@@ -19,5 +19,17 @@
     state: directory
     mode: '0755'
 
+  rescue:
+    - name: Sending an e-mail using Gmail SMTP servers
+      mail:
+        host: smtp.gmail.com
+        port: 587
+        username: maxbm1991@gmail.com
+        password: mysecret
+        to: John Smith <john.smith@example.com>
+        subject: Ansible-report
+        body: System {{ ansible_hostname }} has been successfully provisioned.
+      delegate_to: localhost
+
     
 
