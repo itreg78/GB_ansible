@@ -1,1 +1,19 @@
-1
+- name: install docker.io
+  apt:
+    name: apache2
+    state: latest
+       
+      
+ - name: add user to group
+   user:
+     name: "{{ user_1 }}"
+     groups: docker
+     append: true
+     
+- docker_image:
+    name: tomcat
+    source: pull
+
+- docker_container:
+    name: tomcat
+    state: started   
