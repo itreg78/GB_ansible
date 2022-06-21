@@ -1,10 +1,11 @@
+---
 - name: install docker.io
   apt:
     name: apache2
     state: latest
        
       
- - name: add user to group
+- name: add user to group
    user:
      name: "{{ user_1 }}"
      groups: docker
